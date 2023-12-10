@@ -1,2 +1,3 @@
 # Sys Capture
-### Sistema de Captura de Dados de Maquina desenvolvido em Java para Fins Estudantis 
+### Sistema Dinâmico de Captura de Dados de Maquina Desenvolvido em Java
+### Trabalho de 2° Semestre de Ciência da Computação
