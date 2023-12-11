@@ -2,7 +2,6 @@ package school.sptech.testes;
 
 import school.sptech.captura.*;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class TesteCapturas {
@@ -17,28 +16,28 @@ public class TesteCapturas {
             escolha = leitorInt.nextInt();
             switch (escolha){
                 case 1:
-                    CapturaCPU cpu = new CapturaCPU();
+                    CapturaLoocaCPU cpu = new CapturaLoocaCPU();
                     System.out.println("Nome: %s".formatted(cpu.getNomeCPU()));
                     System.out.println("Porcentagem de USO atual: %.2f %%".formatted(cpu.getUsoAtualPorcentagem()));
                     System.out.println("Frequência: %.2f GHz".formatted(cpu.getUsoAtualFrequencia()));
                     break;
                 case 2:
-                    CapturaRAM ram = new CapturaRAM();
+                    CapturaLoocaRAM ram = new CapturaLoocaRAM();
                     System.out.println("Total: %.2f GB".formatted(ram.getTotalGB()));
                     System.out.println("Em uso %.2f GB".formatted(ram.getUsoAtualGB()));
                     System.out.println("Em uso %.1f%%".formatted(ram.getUsoAtualPorcentagem()));
                     break;
                 case 3:
-                    CapturaDisco disco = new CapturaDisco();
+                    CapturaLoocaDisco disco = new CapturaLoocaDisco();
                     disco.exibeDadosDeTodosOsDisco();
                     break;
                 case 4:
-                    CapturaTemperatura temp = new CapturaTemperatura();
+                    CapturaLoocaTemperatura temp = new CapturaLoocaTemperatura();
                     System.out.println("Temperatura Aproximada: %.2f °C".formatted(temp.getZonaTermicaCelcius()));
                     break;
                 case 5:
-                    CapturaRede rede = new CapturaRede();
-                    System.out.println("Velociade Donwload: %.2f MB".formatted(rede.getVelocidadeDonload()));
+                    CapturaLoocaRede rede = new CapturaLoocaRede();
+                    System.out.println("Velociade Donwload: %.2f MB".formatted(rede.getVelocidadeDownload()));
                     System.out.println("Velociade de Upload: %.2f MB".formatted(rede.getVelocidadeUpload()));
                     break;
                 case 9:

@@ -23,20 +23,20 @@ public class ControleCapturas {
             if(capturaEnum != null){
                 switch (capturaEnum){
                     case CPU:
-                        CapturaCPU cpu = new CapturaCPU();
+                        CapturaLoocaCPU cpu = new CapturaLoocaCPU();
                         valoresCapturas.add(cpu.getUsoAtualPorcentagem());
                         break;
                     case RAM:
-                        CapturaRAM ram = new CapturaRAM();
+                        CapturaLoocaRAM ram = new CapturaLoocaRAM();
                         valoresCapturas.add(ram.getUsoAtualGB());
                         break;
                     case DISCO:
-                        CapturaDisco disco = new CapturaDisco();
+                        CapturaLoocaDisco disco = new CapturaLoocaDisco();
                         valoresCapturas.add(disco.getArmazenamentoTotal());
                         break;
                     case REDE:
-                        CapturaRede rede = new CapturaRede();
-                        valoresCapturas.add(rede.getVelocidadeDonload());
+                        CapturaLoocaRede rede = new CapturaLoocaRede();
+                        valoresCapturas.add(rede.getVelocidadeDownload());
                         break;
                 }
             }

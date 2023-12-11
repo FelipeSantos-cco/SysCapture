@@ -4,16 +4,16 @@ import com.github.britooo.looca.api.group.rede.Rede;
 import com.github.britooo.looca.api.group.rede.RedeInterface;
 import school.sptech.util.Conversor;
 
-public class CapturaRede extends Captura{
+public class CapturaLoocaRede extends CapturaLooca {
 
     private Rede rede;
 
-    public CapturaRede() {
+    public CapturaLoocaRede() {
         super();
         this.rede = looca.getRede();
     }
 
-    public Double getVelocidadeDonload(){
+    public Double getVelocidadeDownload(){
         return Conversor.converterBytesParaMB(getInterfaceAtiva().getBytesRecebidos());
     }
 
@@ -37,5 +37,10 @@ public class CapturaRede extends Captura{
             }
         }
         return null;
+    }
+
+    @Override
+    public Double capturar() {
+        return Conversor.converterBytesParaMB(getInterfaceAtiva().getBytesRecebidos());
     }
 }

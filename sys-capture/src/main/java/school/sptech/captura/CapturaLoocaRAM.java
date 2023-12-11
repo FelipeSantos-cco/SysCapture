@@ -3,10 +3,10 @@ package school.sptech.captura;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 import school.sptech.util.Conversor;
 
-public class CapturaRAM extends Captura {
+public class CapturaLoocaRAM extends CapturaLooca {
     private final Memoria memoria;
 
-    public CapturaRAM() {
+    public CapturaLoocaRAM() {
         super();
         this.memoria = super.looca.getMemoria();
     }
@@ -28,4 +28,8 @@ public class CapturaRAM extends Captura {
     }
 
 
+    @Override
+    public Double capturar() {
+        return Conversor.converterBytesParaGB(this.memoria.getEmUso());
+    }
 }

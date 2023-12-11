@@ -2,10 +2,10 @@ package school.sptech.captura;
 
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
 
-public class CapturaTemperatura extends Captura{
+public class CapturaLoocaTemperatura extends CapturaLooca {
     private final Temperatura temperatura;
 
-    public CapturaTemperatura() {
+    public CapturaLoocaTemperatura() {
         super();
         this.temperatura = super.looca.getTemperatura();
     }
@@ -16,5 +16,10 @@ public class CapturaTemperatura extends Captura{
 
     public Double getZonaTermicaFahrenheit(){
         return (getZonaTermicaCelcius() * 9/5) + 32;
+    }
+
+    @Override
+    public Double capturar() {
+        return this.temperatura.getTemperatura();
     }
 }

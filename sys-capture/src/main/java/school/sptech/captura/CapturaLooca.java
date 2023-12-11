@@ -2,9 +2,9 @@ package school.sptech.captura;
 
 import com.github.britooo.looca.api.core.Looca;
 
-public abstract class Captura {
+public abstract class CapturaLooca implements Capturavel{
     Looca looca;
-    public Captura() {
+    public CapturaLooca() {
         looca = new Looca();
     }
 }

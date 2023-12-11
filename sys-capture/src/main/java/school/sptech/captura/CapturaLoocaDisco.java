@@ -4,13 +4,12 @@ import com.github.britooo.looca.api.group.discos.Disco;
 import com.github.britooo.looca.api.group.discos.DiscoGrupo;
 import school.sptech.util.Conversor;
 
-import java.sql.SQLOutput;
 import java.util.List;
 
-public class CapturaDisco extends Captura{
+public class CapturaLoocaDisco extends CapturaLooca {
     private final DiscoGrupo discoGrupo;
 
-    public CapturaDisco() {
+    public CapturaLoocaDisco() {
         super();
         discoGrupo = super.looca.getGrupoDeDiscos();
     }
@@ -31,8 +30,17 @@ public class CapturaDisco extends Captura{
         return this.discoGrupo.getDiscos().get(0);
     }
 
+
+    @Override
+    public Double capturar() {
+        return Conversor.converterBytesParaGB(this.discoGrupo.getTamanhoTotal());
+    }
+
+
     public Double getArmazenamentoTotal(){
         return Conversor.converterBytesParaGB(this.discoGrupo.getTamanhoTotal());
     }
+
+
 }
 
