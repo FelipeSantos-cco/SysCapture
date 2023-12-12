@@ -33,4 +33,9 @@ java -jar sysCapture.jar
 ```
 - Assim que teclar no enter, o passo a passo da aplicação será exibido em tela, assim facilitando a execussão pelo usuário, e também evita da documentação ser consultada a todo momento, pois tem um apoio de forma mais próxima.
 
-### 2° Forma de usar, git clone do Projeto!
+### 2° Forma de usar, git clone do Projeto! (e Testes!)
+Se você clonou o projeto, pode executar o metôdo main do projeto, e fazer as suas análises sobre o código. 
+Na pasta de Testes, tem códigos prontos para serem executados, com novas (e futuras) implementações.
+
+# Importante
+Fique a vontade para contribuir com o projeto, criando um fork ou mandando Issues para nós. Ficaremos extremamente felizes com o seu apoio <3 :) 
