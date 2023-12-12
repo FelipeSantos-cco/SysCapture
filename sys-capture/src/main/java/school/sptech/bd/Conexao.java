@@ -20,6 +20,8 @@ public abstract class Conexao {
         conexaoBD = new JdbcTemplate(dataSource);
     }
 
+    public abstract void inserirDadosComponenete(String componente, Double uso);
+
     public JdbcTemplate getConexaoBD() {
         return conexaoBD;
     }
